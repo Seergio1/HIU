@@ -1,0 +1,217 @@
+.bigcontainer{
+    width: 100%;
+    /* height: 95vh; */
+    /* background-color: black; */
+    /* border-radius: 50px; */
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+}
+.container{
+    width: 80%;
+    height: 75vh;
+    margin: auto;
+    /* border-radius: 50px; */
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    align-items: center;
+    animation: swapAnimation 0.5s forwards
+    /* padding-top: ; */
+    /* padding-left: 5%; */
+}
+.gauche{
+    width: 50%;
+    height: 100%;
+    /* background-color: aqua; */
+    /* float: left; */
+    /* margin-top: 4%; */
+    /* margin-left: 4%; */
+    /* border-radius: 50px; */
+    background-image: url("../../assets/img/sarygasy.png");
+    background-size: cover;
+    text-align: center;
+    /* transition: 0.5s; */
+    
+}
+.gauche h1{
+    color: white;
+    font-size: 40px;
+    margin-top: 50%;
+    /* margin: auto; */
+}
+/* .ligne{
+    width: 3px;
+    height: 80%;
+    background-color: rgb(82, 113, 91);
+    /* margin-top: 50px; */
+
+    /* margin-top: ; */
+    
+/* } */ 
+.droite{
+    width: 40%;
+    /* height: 80%; */
+    /* background-color: rgba(228, 169, 33, 0.8); */
+    margin: auto;
+    margin-right: 4%;
+    /* margin-top: 4%; */
+    /* border-radius: 50px; */
+    text-align: center;
+    transition: 0.5s;
+    /* background-color: aqua; */
+
+    /* display: flex;
+    flex-direction:column;
+    align-items: center; */
+    /* justify-content: ; */
+
+}
+.droite h2{
+    font-size: 20px;
+    width: 50%;
+    margin: auto;
+    /* margin-top: 10vh; */
+}
+.droite h3{
+    /* text-align: end; */
+    font-family: 'Cinzel';
+    /* font-size: 25px; */
+    /* margin: 0; */
+}
+.inputLog{
+    text-align: start;
+    width: 80%;
+    /* height: 100px; */
+    margin: auto;
+    margin-top: 20px;
+}
+.inputLog p{
+    font-size: 13px;
+}
+.inputLog input{
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid black;
+    /* background-color: antiquewhite; */
+    margin-top: 10px;
+    /* margin-left: 25%; */
+}
+
+.forgot{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+.forgot span{
+    cursor: pointer;
+}
+.forgot span:hover{
+    text-decoration: underline;
+}
+
+
+.lien{
+    text-decoration: none;
+    color: black;
+    font-size: 13px;
+}
+.bttL{
+    width: 80%;
+    height: 50px;
+    background-color: black;
+    margin: auto;
+    margin-top: 20px;
+    /* align-items: center; */
+    /* text-align: center; */
+    /* color: white; */
+    border-radius: 20px;
+    padding-top: 15px;
+    cursor: pointer;
+    transition: 1s;
+    color: white;
+
+}
+
+.bttLl{
+    width: 80%;
+    height: 50px;
+    background-color: white;
+    margin: auto;
+    margin-top: 20px;
+    /* align-items: center; */
+    /* text-align: center; */
+    /* color: white; */
+    border-radius: 20px;
+    padding-top: 15px;
+    cursor: pointer;
+    transition: 1s;
+    border: 1px solid black;
+    color: black;
+}
+
+.bttL:hover{
+    background-color: white ;
+    border: 1px solid black;
+    color: black;
+}
+.bttLl:hover{
+    background-color: black ;
+    /* border: 1px solid black; */
+    color: white;
+}
+.log{
+    /* text-align: start; */
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 1000px){
+    /* .container{
+        flex-direction: column;
+        justify-content: space-between;
+    } */
+    .gauche{
+        /* width: 80%;
+        height: 100%;
+        margin-left: 0; */
+        /* margin-top: 10%;  */
+        display: none;
+    }
+   /* .container{
+    height: 120vh;
+    /* padding-bottom: 5%;*/
+    /* padding-top: 10%; 
+   } */ 
+    
+    .droite{
+        width: 80%;
+        height: auto;
+        margin: auto;
+        /* justify-content: center; */
+        /* align-items: center; */
+        /* margin-top: 20%; */
+    }
+    .droite h2{
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 740px){
+    .container{
+        height: 90vh;
+    }
+
+    }
+@keyframes swapAnimation {
+    from {
+      opacity: 0;
+      transform: scale(0);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }

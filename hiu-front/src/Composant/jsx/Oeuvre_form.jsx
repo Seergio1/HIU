@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import '../css/oeuvre.css'
 import { Input } from "@nextui-org/react";
 import { Select, SelectSection, SelectItem } from "@nextui-org/react";
@@ -14,16 +14,40 @@ function Oeuvre() {
     const [formData, setFormData] = useState(new FormData());
     const [loading,setLoading]=useState(false);
     const [error,setError]=useState(null);
+
+    const [data,setData]=useState(null);
+
+    useEffect(async function () {
+        setLoading(true);
+        let config = {
+            method: 'get',
+            maxBodyLength: Infinity,
+            url: 'http://localhost:8080/api/v1/Expositions',
+        };
+            await axios.request(config)
+            .then((response) => {
+                setData(response.data.data[0]);
+                setLoading(false);
+                console.log(response.data.data[0]);
+            })
+    }
+    ,[]);
+
     const handleSubmit = async (event) => {
         event.preventDefault();
         setLoading(true);
         handleOpen();
         try {
-            
                 let config = {
                     method: 'post',
                     maxBodyLength: Infinity,
                     url: 'http://localhost:8080/api/v1/Oeuvres',
+
+                    data : formData,
+                    headers:{
+                        authorization:"Bearer "+localStorage.getItem("Token")
+                    }
+                };
                     data : formData
                     };
                     await axios.request(config)
@@ -61,7 +85,8 @@ function Oeuvre() {
         <>
             <section className='center h-screen flex items-center content-center'>
                 <div className="rounded-md shadow-large w-full grid place-items-center child">
-                    <div className="container">
+
+                    <div className="container-oeuvre">
                         <h1 className="title">Exposez votre oeuvre.</h1>
                         <p className="text">Faites partie d'une galerie virtuelle dynamique et présentez vos œuvres à un public captivé 
                         <br />par la beauté de l'art.</p>
@@ -78,6 +103,21 @@ function Oeuvre() {
                                             isRequired
                                             label="Exposition"
                                             placeholder="Choisir une exposition"
+
+                                            description="Choisir une exposition."
+                                            onChange={handleInputChange}
+                                        >
+                                        {data ? 
+                                            data.map((d)=>(
+                                                <SelectItem key={d.id} value={d.id}>
+                                                    {d.titre}
+                                                </SelectItem>
+                                            ))
+                                            :
+                                            <SelectItem key="0" value="0">
+                                                
+                                            </SelectItem>
+                                        }
                                             defaultSelectedKeys={["0"]}
                                             description="Choisir une exposition."
                                             onChange={handleInputChange}
