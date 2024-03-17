@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 import "./Login.css";
 // import logSary from '../../assets/img/logPhoto.jpg';
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import Inscription from "./Inscription";
-function Login1() {
+function Login() {
   // const [blop,setBlop] = useState(0);
   // function change(){
 
   // }
+  const nav = useNavigate();
   const [position, setPosition] = useState(1);
 
   const swapDivs = () => {
@@ -30,11 +31,11 @@ function Login1() {
                 <h2>Connectez-vous à votre compte.</h2>
                 <div className="inputLog">
                   <p>Email</p>
-                  <input type="email" />
+                  <input type="email" id="email" />
                 </div>
                 <div className="inputLog">
                   <p>Mots de passe</p>
-                  <input type="text" />
+                  <input type="text" id="password"/>
                 </div>
                 <div className="forgot">
                   <span onClick={swapDivs}>Inscription</span>
@@ -44,7 +45,32 @@ function Login1() {
                     </NavLink>
                   </span>
                 </div>
-                <div className="bttL">Connexion</div>
+                <div className="bttL" onClick={async () => {
+                var email = document.getElementById("email");
+                var password = document.getElementById("password");
+                const formData = new FormData();
+                formData.append('email',email);
+                formData.append('mdp',password);
+                // console.log(auth);
+                let url =
+                  "https://buycarwebservice-production.up.railway.app/auth/authenticate";
+                let response = await fetch(url, {
+                  method: "POST",
+                  headers: {
+                    "Content-Type": "application/json",
+                  },
+                  body: formData,
+                });
+                response = await response.json();
+                console.log(response);
+                console.log("Token :"+response.token);
+                if (response.data.error === null) {
+                  localStorage.setItem("Token", response.object.token);
+                  nav("/");
+                } else {
+                    nav("/Login");
+                }
+              }} >Connexion</div>
               </>
             )}
             {position === 2 && (
@@ -63,4 +89,4 @@ function Login1() {
   );
 }
 
-export default Login1;
+export default Login;
