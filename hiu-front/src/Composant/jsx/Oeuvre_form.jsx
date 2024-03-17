@@ -14,6 +14,7 @@ function Oeuvre() {
     const [formData, setFormData] = useState(new FormData());
     const [loading,setLoading]=useState(false);
     const [error,setError]=useState(null);
+
     const [data,setData]=useState(null);
 
     useEffect(async function () {
@@ -31,7 +32,7 @@ function Oeuvre() {
             })
     }
     ,[]);
-    
+
     const handleSubmit = async (event) => {
         event.preventDefault();
         setLoading(true);
@@ -41,11 +42,14 @@ function Oeuvre() {
                     method: 'post',
                     maxBodyLength: Infinity,
                     url: 'http://localhost:8080/api/v1/Oeuvres',
+
                     data : formData,
                     headers:{
                         authorization:"Bearer "+localStorage.getItem("Token")
                     }
                 };
+                    data : formData
+                    };
                     await axios.request(config)
                     .then((response) => {
                         setFormData(new FormData());
@@ -63,7 +67,6 @@ function Oeuvre() {
 
     const handleInputChange = (event) => {
         const { name, value } = event.target;
-        console.log(name+": "+value);
         if (formData.get(name)!=null) {
             formData.set(name,value);
         } else {
@@ -82,6 +85,7 @@ function Oeuvre() {
         <>
             <section className='center h-screen flex items-center content-center'>
                 <div className="rounded-md shadow-large w-full grid place-items-center child">
+
                     <div className="container-oeuvre">
                         <h1 className="title">Exposez votre oeuvre.</h1>
                         <p className="text">Faites partie d'une galerie virtuelle dynamique et présentez vos œuvres à un public captivé 
@@ -99,6 +103,7 @@ function Oeuvre() {
                                             isRequired
                                             label="Exposition"
                                             placeholder="Choisir une exposition"
+
                                             description="Choisir une exposition."
                                             onChange={handleInputChange}
                                         >
@@ -113,6 +118,16 @@ function Oeuvre() {
                                                 
                                             </SelectItem>
                                         }
+                                            defaultSelectedKeys={["0"]}
+                                            description="Choisir une exposition."
+                                            onChange={handleInputChange}
+                                        >
+                                            <SelectItem key="0" value="0">
+                                                Bandy milay
+                                            </SelectItem>
+                                            <SelectItem key="1" value="0">
+                                                Dania
+                                            </SelectItem>
                                         </Select>
                                     </div>
                                     <div className="input_box">
