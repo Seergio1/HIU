@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.center{
+    width: 75%;
+    margin-left: 50px;
+}
+
+.left{
+    height: 100%;
+    width: 40%;
+}
+
+.child{
+    height: 85%;
+}
+
+.right{
+    padding: 10px !important;
+    width: 60%;
+    display: grid;
+    place-items: center;
+}
+
+.inner-right{
+    width: 80%;
+    height: 80%;
+}
+
+.right-title{
+    font-size: 50px;
+    font-weight: bold;
+    line-height: normal;
+}
+
+.theme{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.right-text{
+    font-size: small;
+}
+
+.date{
+    margin-top: 20px !important;
+}
+
+.dates{
+    margin-top: 5px;
+}
+
+.submit{
+    color: white !important;
+    background-color: black !important;
+    border-radius: 10px;
+    padding: 7px;
+    margin-top: 20px;
+    font-size: small;
+    width: 100%;
+    height: 50px;
+}
+
+.image{
+    width: 100%;
+    height: 100%;
+}
+
+.right-form{
+    display: grid;
+    place-items: center;
+}
+
+.success{
+    width: 50px;
+    height: 50px;
+    background-color: rgb(72, 222, 72);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.success-icon{
+    font-weight: bold;
+    font-size: medium;
+}
