@@ -198,6 +198,13 @@
         margin-top: 0;
     }
 }
+
+@media screen and (max-width: 740px){
+    .container{
+        height: 90vh;
+    }
+
+    }
 @keyframes swapAnimation {
     from {
       opacity: 0;
