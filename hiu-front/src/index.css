@@ -24,6 +24,16 @@ body {
   src: local("Sora"), url("./assets/font/Sora/static/Sora-SemiBold.ttf")format("truetype");
 }
 
+@font-face {
+  font-family: "Carattere Regular";
+  src: local("Carattere"), url("./assets/font/Carattere-Regular.ttf")format("truetype");
+}
+@font-face {
+  font-family: "Cinzel";
+  src: local("Cinzel"), url("./assets/font/Cinzel/Cinzel-VariableFont_wght.ttf")format("truetype");
+}
+
+
 * {
   margin: 0;
   padding: 0;
