@@ -25,6 +25,7 @@
   /* background-color: #010101; */
   font-weight: bold;
   font-size: 18px;
+  font-family: "AkkuraLL";
 }
 
 .nav-bar-container .nav-bar-header .menu-icon {
@@ -100,14 +101,6 @@
   cursor: pointer;
 }
 
-.nav-bar-container .nav-bar-content .list_ .nav-bar-item:hover {
-  /* color: #a19e9f; */
-}
-
-
-
-
-
 .nav-bar-container .nav-bar-content .list_ .show {
   opacity: 1;
   transform: none;
@@ -115,6 +108,13 @@
 
 .nav-bar-container .open_content {
   height: 100vh;
+}
+
+@media only screen and (width <=540px) {
+  .nav-bar-container .nav-bar-header .logo-container {
+    width: 30%;
+    font-size: 15px;
+  }
 }
 
 /*# sourceMappingURL=NavBar.css.map */

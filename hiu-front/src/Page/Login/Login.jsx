@@ -15,10 +15,7 @@ function Login() {
   const [position, setPosition] = useState(1);
   const [formData, setFormData] = useState(new FormData());
   const [loading, setLoading] = useState(false);
-<<<<<<< HEAD
   const navigate = useNavigate();
-=======
->>>>>>> 96875d133b898af3a4b24148f03235bd5cf5aa85
 
   const swapDivs = () => {
     setPosition(position === 1 ? 2 : 1);
@@ -35,7 +32,6 @@ function Login() {
       url: 'http://localhost:8080/api/v1/auth/login',
       data: formData
     };
-<<<<<<< HEAD
     // await axios.request(config)
     //   .then((response) => {
     //     setFormData(new FormData());
@@ -51,23 +47,6 @@ function Login() {
     //       nav("/Login");
     //     }
     //   })
-=======
-    await axios.request(config)
-      .then((response) => {
-        setFormData(new FormData());
-        if (response.data.error != null) {
-          setError(response.data.error);
-        }
-        console.log(JSON.stringify(response.data));
-        setLoading(false);
-        if (response.data.error === null) {
-          localStorage.setItem("Token", response.data.data[1].token);
-          nav("/");
-        } else {
-          nav("/Login");
-        }
-      })
->>>>>>> 96875d133b898af3a4b24148f03235bd5cf5aa85
   }
   return (
     <>
@@ -88,7 +67,6 @@ function Login() {
                   <input type="email" id="email" />
                 </div>
                 <div className="inputLog">
-<<<<<<< HEAD
                   <p>Mot de passe</p>
                   <input type="text" id="password" />
                 </div>
@@ -99,20 +77,6 @@ function Login() {
 
                 </div>
                 <div className="bttL" onClick={login}>Connexion</div>
-=======
-                  <p>Mots de passe</p>
-                  <input type="text" id="password" />
-                </div>
-                <div className="forgot">
-                  <span onClick={swapDivs}>Inscription</span>
-                  <span>
-                    <NavLink to={"#"} className="lien">
-                      Forgot Password?
-                    </NavLink>
-                  </span>
-                </div>
-                <div className="bttL" onClick={login} >Connexion</div>
->>>>>>> 96875d133b898af3a4b24148f03235bd5cf5aa85
               </>
             )}
             {position === 2 && (
@@ -123,12 +87,9 @@ function Login() {
                 </div>
               </>
             )}
-<<<<<<< HEAD
             <div className="backToHome" onClick={() => {
               navigate('/')
             }}>Home</div>
-=======
->>>>>>> 96875d133b898af3a4b24148f03235bd5cf5aa85
           </div>
         </div>
       </div>

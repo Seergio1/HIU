@@ -75,6 +75,13 @@ function NavBar({ lenis }) {
             <div className={`nav-bar-item ${open ? "show" : ""}`} onClick={() => {
               handleOpen()
               setTimeout(() => {
+                navigate('/PhotoIA')
+              }, 400)
+            }}>Photo IA</div>
+
+            <div className={`nav-bar-item ${open ? "show" : ""}`} onClick={() => {
+              handleOpen()
+              setTimeout(() => {
                 navigate('/Login')
               }, 400)
             }}>Log in</div>

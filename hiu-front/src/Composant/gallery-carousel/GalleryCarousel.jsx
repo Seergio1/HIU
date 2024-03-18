@@ -43,7 +43,7 @@ export function GalleryCarousel() {
                         <div className='gallery-info'>
                             <div className='titre'>Surrealist</div>
                             <div className='artiste-name'>Lee Miller</div>
-                            <div className='date'>4 November 2023-14 April 2024</div>
+                            <div className='dates'>4 November 2023-14 April 2024</div>
                         </div>
                     </div>
                 </SwiperSlide>
@@ -55,7 +55,7 @@ export function GalleryCarousel() {
                         <div className='gallery-info'>
                             <div className='titre'>Surrealist</div>
                             <div className='artiste-name'>Lee Miller</div>
-                            <div className='date'>4 November 2023-14 April 2024</div>
+                            <div className='dates'>4 November 2023-14 April 2024</div>
                         </div>
                     </div>
                 </SwiperSlide>
@@ -100,7 +100,7 @@ export function GalleryScroll() {
                                 <div className='gallery-info'>
                                     <div className='titre'>Surrealist</div>
                                     <div className='artiste-name'>Lee Miller</div>
-                                    <div className='date'>4 November 2023-14 April 2024</div>
+                                    <div className='dates'>4 November 2023-14 April 2024</div>
                                 </div>
                             </div>
                         </Fade>

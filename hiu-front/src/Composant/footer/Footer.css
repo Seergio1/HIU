@@ -1,0 +1,72 @@
+:root {
+    --primary-footer-color: #a2a2a2;
+}
+
+.header-footer {
+    background-color: var(--footer-main-color);
+    display: flex;
+    padding: 3rem 3rem 8rem 3rem;
+    border-bottom: 1px solid var(--primary-footer-color)
+}
+
+.header-footer .left-content .logo {
+    color: white;
+}
+
+.header-footer .left-content {
+    width: 50%;
+}
+
+.header-footer .left-content>div {
+    font-family: "AkkuraLL";
+    font-size: 50px;
+    line-height: 40px;
+}
+
+.header-footer .left-content .mot {
+    color: var(--primary-footer-color);
+}
+
+
+.header-footer .right-content {
+    width: 50%;
+    color: var(--primary-footer-color);
+}
+
+.content-footer {
+    background-color: var(--footer-main-color);
+    padding: 2rem 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.content-footer .copyright {
+    color: var(--primary-footer-color);
+    font-size: 12px;
+}
+
+.content-footer .reseau {
+    display: flex;
+}
+
+.content-footer .reseau>div {
+    color: var(--primary-footer-color);
+    font-size: 20px;
+    margin: 0 0.5rem;
+}
+
+@media only screen and (width <=540px) {
+    .header-footer {
+        flex-direction: column;
+    }
+
+    .header-footer .left-content,
+    .header-footer .right-content {
+        width: 100%;
+    }
+
+    .header-footer .right-content {
+        margin-top: 5rem;
+        text-align: center;
+    }
+}

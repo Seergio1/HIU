@@ -1,7 +1,11 @@
-
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+  font-family: "AkkuraLL";
+  src: local("AkkuraLL"), url("./assets/font/FontsFree-Net-Akkurat-Bold.ttf")format("truetype");
 }
 
 

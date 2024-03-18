@@ -1,6 +1,10 @@
 import React from 'react'
 import { json } from 'react-router-dom';
 
+
+
+
+
 export async function FetchSpec({ path, method, requestBody }) {
   let data = []
   const apiGet = await fetch(`https://cloud-cardeals-production.up.railway.app${path}`, {

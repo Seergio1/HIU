@@ -4,7 +4,6 @@ import { Input } from "@nextui-org/react";
 import { Image } from "@nextui-org/react";
 import axios from 'axios';
 import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, useDisclosure } from "@nextui-org/react";
-<<<<<<< HEAD
 import { Spinner } from "@nextui-org/react";
 import { HiCheck } from "react-icons/hi2";
 
@@ -12,32 +11,16 @@ function Exposition_form() {
     const { isOpen, onOpen, onClose } = useDisclosure();
     const [formData, setFormData] = useState(new FormData());
     const [loading, setLoading] = useState(false);
-=======
-import {Spinner} from "@nextui-org/react";
-import { HiCheck } from "react-icons/hi2";
-
-function Exposition() {
-    const { isOpen, onOpen, onClose } = useDisclosure();
-    const [formData, setFormData] = useState(new FormData());
-    const [loading,setLoading]=useState(false);
->>>>>>> 96875d133b898af3a4b24148f03235bd5cf5aa85
     const handleSubmit = async (event) => {
         event.preventDefault();
         setLoading(true);
         handleOpen();
         try {
             let config = {
-<<<<<<< HEAD
                 method: 'post',
                 maxBodyLength: Infinity,
                 url: 'http://localhost:8080/api/v1/Expositions',
                 data: formData
-=======
-            method: 'post',
-            maxBodyLength: Infinity,
-            url: 'http://localhost:8080/api/v1/Expositions',
-            data : formData
->>>>>>> 96875d133b898af3a4b24148f03235bd5cf5aa85
             };
             // await axios.request(config)
             // .then((response) => {
@@ -55,11 +38,7 @@ function Exposition() {
 
     const handleInputChange = (event) => {
         const { name, value } = event.target;
-<<<<<<< HEAD
         formData.append(name, value);
-=======
-        formData.append(name,value);
->>>>>>> 96875d133b898af3a4b24148f03235bd5cf5aa85
     };
 
     const handleOpen = () => {
@@ -68,11 +47,7 @@ function Exposition() {
     return (
         <>
             <section className='center h-screen flex items-center content-center'>
-<<<<<<< HEAD
                 <div className="rounded-md w-full flex flex-row child">
-=======
-                <div className="rounded-md shadow-large w-full flex flex-row child">
->>>>>>> 96875d133b898af3a4b24148f03235bd5cf5aa85
                     <div className="left">
                         <Image
                             isZoomed
@@ -130,8 +105,4 @@ function Exposition() {
     );
 }
 
-<<<<<<< HEAD
 export default Exposition_form;
-=======
-export default Exposition;
->>>>>>> 96875d133b898af3a4b24148f03235bd5cf5aa85
