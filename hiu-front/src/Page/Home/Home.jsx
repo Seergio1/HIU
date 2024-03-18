@@ -7,6 +7,7 @@ import DescriSection from '../../Composant/description-section/DescriSection';
 import { GalleryCarousel } from '../../Composant/gallery-carousel/GalleryCarousel';
 
 import ScrollText from '../../Composant/scroll-text/ScrollText';
+import Pub from '../../Composant/pub/Pub';
 function Home() {
 
     return <>
@@ -14,6 +15,7 @@ function Home() {
         <DescriSection />
         <GalleryCarousel />
         <ScrollText items={["DÉCOUVREZ, PARTAGEZ, VIVEZ L'ART ET LA CULTURE EN UN SEUL LIEU", "-"]} repeat={4} gap={30} duration={30} />
+        <Pub />
     </>
 }
 
