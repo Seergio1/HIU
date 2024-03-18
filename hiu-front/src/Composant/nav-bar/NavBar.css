@@ -1,0 +1,120 @@
+.nav-bar-container {
+  width: 100%;
+  font-family: "Dortmund";
+  position: fixed;
+  z-index: 2;
+  /* background-color: red; */
+}
+
+.nav-bar-container .nav-bar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+  padding: 10px 3vw;
+}
+
+.nav-bar-container .nav-bar-header .logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  /* height: 50px;
+  width: 50px; */
+  border-radius: 0.4rem;
+  /* background-color: #010101; */
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.nav-bar-container .nav-bar-header .menu-icon {
+  position: relative;
+  width: 2.5rem;
+  z-index: 4;
+  height: 2rem;
+}
+
+.nav-bar-container .nav-bar-header .menu-icon .bar {
+  height: 2px;
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  top: 50%;
+  transform-origin: left;
+  transform: translate(-50%, -50%);
+  background-color: var(--footer-main-color);
+  transition: all 0.2s ease-in-out;
+}
+
+.nav-bar-container .nav-bar-header .menu-icon .up_ {
+  height: 1.5px;
+  transform: rotate(45deg) translate(-50%, -50%);
+  background-color: #a19e9f;
+  width: 90%;
+}
+
+.nav-bar-container .nav-bar-header .menu-icon .down_ {
+  height: 1.5px;
+  transform: rotate(-45deg) translate(-50%, -50%);
+  background-color: #a19e9f;
+  width: 90%;
+}
+
+.nav-bar-container .open_nav {
+  background-color: var(--footer-main-color);
+}
+
+.nav-bar-container .nav-bar-content {
+  background-color: var(--footer-main-color);
+  height: 0;
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  padding: 0 10px;
+  transition: all 0.32s ease-in-out;
+}
+
+.nav-bar-container .nav-bar-content .list_ {
+  padding: 2vw 0;
+  width: 100%;
+}
+
+.nav-bar-container .nav-bar-content .list_ .nav-bar-item {
+  font-size: 3.5rem;
+  margin: 5px 0;
+  width: 100%;
+  padding: 1px;
+  transition: opacity 0.8s ease-in-out, color 0.2s ease-in-out;
+  font-family: Designer;
+  opacity: 0;
+  transform: translateY(1rem);
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  margin-bottom: 2rem;
+  cursor: pointer;
+}
+
+.nav-bar-container .nav-bar-content .list_ .nav-bar-item:hover {
+  /* color: #a19e9f; */
+}
+
+
+
+
+
+.nav-bar-container .nav-bar-content .list_ .show {
+  opacity: 1;
+  transform: none;
+}
+
+.nav-bar-container .open_content {
+  height: 100vh;
+}
+
+/*# sourceMappingURL=NavBar.css.map */

@@ -24,6 +24,80 @@ body {
   src: local("Sora"), url("./assets/font/Sora/static/Sora-SemiBold.ttf")format("truetype");
 }
 
+
+
+
+@font-face {
+  font-family: Poppins light;
+  src: url("./assets/font/Poppins-Light.ttf");
+}
+
+@font-face {
+  font-family: Poppins medium;
+  src: url("./assets//font/Poppins-Medium.ttf");
+}
+
+@font-face {
+  font-family: Poppins regular;
+  src: url("./assets/font/Poppins-Regular.ttf");
+}
+
+@font-face {
+  font-family: Poppins thin;
+  src: url("./assets/font/Poppins-Thin.ttf");
+}
+
+@font-face {
+  font-family: Open sans light;
+  src: url("./assets/font/OpenSans-Light.ttf");
+}
+
+@font-face {
+  font-family: Open sans medium;
+  src: url("./assets/font/OpenSans-Medium.ttf");
+}
+
+@font-face {
+  font-family: Open sans regular;
+  src: url("./assets/font/OpenSans-Regular.ttf");
+}
+
+@font-face {
+  font-family: Roboto light;
+  src: url("./assets/font/Roboto-Light.ttf");
+}
+
+@font-face {
+  font-family: Roboto medium;
+  src: url("./assets/font/Roboto-Medium.ttf");
+}
+
+@font-face {
+  font-family: Roboto regular;
+  src: url("./assets/font/Roboto-Regular.ttf");
+}
+
+@font-face {
+  font-family: Roboto thin;
+  src: url("./assets/font/Roboto-Thin.ttf");
+}
+
+@font-face {
+  font-family: Designer;
+  src: url("./assets/font/DESIGNER.otf");
+}
+
+@font-face {
+  font-family: HatschSans;
+  src: url("./assets/font/HatschSans.otf");
+}
+
+@font-face {
+  font-family: Dortmund;
+  src: url("./assets/font/Dortmund-ExtraBold.otf");
+}
+
+
 * {
   margin: 0;
   padding: 0;
@@ -38,4 +112,12 @@ body {
   --font: #111;
 
 
+}
+
+body {
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
 }

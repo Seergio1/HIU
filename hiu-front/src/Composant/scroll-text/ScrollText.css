@@ -1,0 +1,21 @@
+.scroller {
+  display: flex;
+  overflow: hidden;
+}
+
+.scroller .scroller-inner {
+  display: flex;
+  font-size: 100px;
+  text-transform: uppercase;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.scroller .scroller-inner div {
+  display: flex;
+  width: -moz-max-content;
+  width: max-content;
+  font-family: Open sans regular;
+}
+
+/*# sourceMappingURL=ScrollText.css.map */

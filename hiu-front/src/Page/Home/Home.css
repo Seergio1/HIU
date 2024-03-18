@@ -1,0 +1,65 @@
+html.lenis {
+    height: auto;
+}
+
+.lenis.lenis-smooth {
+    scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+    overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+    pointer-events: none;
+}
+
+.home-container::-webkit-scrollbar {
+    display: none;
+}
+
+.home-container {
+    min-height: 100vh;
+    overflow-y: scroll;
+}
+
+:root {
+    font-size: 16px;
+
+    --footer-main-color: #150c0f;
+
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+    margin: 0.4rem;
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--footer-main-color);
+    width: 5px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #888;
+    border: 5px solid #888;
+    border-radius: 10px;
+
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: #bababa;
+}
+
+* {
+    position: relative;
+    cursor: none;
+}
+
+.nav-bar-container .nav-bar-content .list_ .nav-bar-item:hover~.cursor {
+    transform: scale(6);
+}

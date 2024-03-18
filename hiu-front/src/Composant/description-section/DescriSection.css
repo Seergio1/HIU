@@ -1,0 +1,112 @@
+.home-container .descri-container {
+    /* background-color: rebeccapurple; */
+    display: flex;
+    height: 40vh;
+}
+
+.home-container .descri-container>div {
+    /* background-color: rgba(255, 255, 255, 0.8); */
+    text-align: center
+}
+
+.home-container .descri-container .texte-descriptif {
+    font-size: 30px;
+    font-family: "Roboto regular" !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    padding: 0.5rem;
+    text-align: start;
+    margin-left: auto;
+    /* background-color: red; */
+}
+
+.home-container .descri-container .about-container {
+    /* background-color: black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 30%;
+    padding: 0.5rem;
+}
+
+.descri-container .about-container p {
+    /* background-color: red; */
+    font-size: 16px;
+
+}
+
+.bouton-container {
+    display: flex;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    background: rgb(33, 33, 33);
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(33, 33, 33);
+    min-width: 120px;
+    font-size: 17px;
+}
+
+
+.about-container .about-texte {
+    text-align: left;
+    font-family: "Roboto light" !important;
+    margin: 0.5rem 0;
+    min-width: 180px;
+    font-size: 15px;
+    /* font-weight: bold; */
+}
+
+.bouton-container .arrow {
+    margin: 0 .5rem 0 0;
+    transition: 0.2s ease-in-out;
+}
+
+.bouton-container button {
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    border: none;
+    text-transform: uppercase;
+}
+
+.bouton-container:hover .arrow {
+    transform: translateX(0.2rem);
+}
+
+@media only screen and (width <=540px) {
+    .descri-container .texte-descriptif {
+        font-size: 22px;
+    }
+
+    .descri-container .texte-descriptif {
+        width: 60%;
+    }
+
+    .bouton-container {
+        padding: 0.6rem;
+    }
+
+    .bouton-container button {
+        font-size: 10px;
+    }
+
+    .about-container .about-texte {
+        font-size: 10px;
+        min-width: 150px;
+    }
+}
+
+@media only screen and (width <=540px) {
+    .descri-container {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .descri-container .about-container,
+    .descri-container .texte-descriptif {
+        width: 100%;
+    }
+}
