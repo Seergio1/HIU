@@ -39,7 +39,13 @@ function PhotoIA({statue}) {
 </div>
 <div className="droitecont">
   <h2 onClick={() => scrollToElement('la')}>DECOUVREZ </h2>
-  <img src={saryy} alt="" />
+  <model-viewer 
+          src="elven_ranger_statue.glb" 
+          ar camera-controls 
+          shadow-intensity="1" 
+          touch-action="pan-y">   
+        </model-viewer>
+  {/* <img src={saryy} alt="" /> */}
   {/* <model-viewer src="../../assets/statue/vysehrad_-_statue_of_ctirad_and_sarka.glb" shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer> */}
 </div>
 

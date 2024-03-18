@@ -53,7 +53,7 @@ body{
 .droitecont h2{
     opacity: 0;
 }
-.droitecont img{
+.droitecont model-viewer {
     width: 90%;
     height: 100vh;
     /* position: absolute; */
@@ -184,7 +184,7 @@ body{
         /* margin-top: 250px; */
         order: 2;
     }
-    .droitecont img{
+    .droitecont model-viewer {
         height: 60%;
         margin-top: 100px;
     }
