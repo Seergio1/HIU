@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+<<<<<<< HEAD
 
 .center {
     width: 1000px;
@@ -9,38 +10,67 @@
 }
 
 .left {
+=======
+.center{
+    width: 75%;
+    margin-left: 50px;
+}
+
+.left{
+>>>>>>> 96875d133b898af3a4b24148f03235bd5cf5aa85
     height: 100%;
     width: 40%;
 }
 
+<<<<<<< HEAD
 .child {
     height: 85%;
 }
 
 .right {
+=======
+.child{
+    height: 85%;
+}
+
+.right{
+>>>>>>> 96875d133b898af3a4b24148f03235bd5cf5aa85
     padding: 10px !important;
     width: 60%;
     display: grid;
     place-items: center;
 }
 
+<<<<<<< HEAD
 .inner-right {
+=======
+.inner-right{
+>>>>>>> 96875d133b898af3a4b24148f03235bd5cf5aa85
     width: 80%;
     height: 80%;
 }
 
+<<<<<<< HEAD
 .right-title {
+=======
+.right-title{
+>>>>>>> 96875d133b898af3a4b24148f03235bd5cf5aa85
     font-size: 50px;
     font-weight: bold;
     line-height: normal;
 }
 
+<<<<<<< HEAD
 .theme {
+=======
+.theme{
+>>>>>>> 96875d133b898af3a4b24148f03235bd5cf5aa85
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
 }
 
+<<<<<<< HEAD
 .right-text {
     font-size: small;
 }
@@ -54,6 +84,21 @@
 }
 
 .submit {
+=======
+.right-text{
+    font-size: small;
+}
+
+.date{
+    margin-top: 20px !important;
+}
+
+.dates{
+    margin-top: 5px;
+}
+
+.submit{
+>>>>>>> 96875d133b898af3a4b24148f03235bd5cf5aa85
     color: white !important;
     background-color: black !important;
     border-radius: 10px;
@@ -64,17 +109,29 @@
     height: 50px;
 }
 
+<<<<<<< HEAD
 .image {
+=======
+.image{
+>>>>>>> 96875d133b898af3a4b24148f03235bd5cf5aa85
     width: 100%;
     height: 100%;
 }
 
+<<<<<<< HEAD
 .right-form {
+=======
+.right-form{
+>>>>>>> 96875d133b898af3a4b24148f03235bd5cf5aa85
     display: grid;
     place-items: center;
 }
 
+<<<<<<< HEAD
 .success {
+=======
+.success{
+>>>>>>> 96875d133b898af3a4b24148f03235bd5cf5aa85
     width: 50px;
     height: 50px;
     background-color: rgb(72, 222, 72);
@@ -84,7 +141,11 @@
     align-items: center;
 }
 
+<<<<<<< HEAD
 .success-icon {
+=======
+.success-icon{
+>>>>>>> 96875d133b898af3a4b24148f03235bd5cf5aa85
     font-weight: bold;
     font-size: medium;
 }

@@ -2,6 +2,7 @@ import './App.css';
 import { Routes, Route, Link } from "react-router-dom";
 import { useState } from 'react';
 import Home from './Page/Home/Home';
+<<<<<<< HEAD
 import Exposition from './Page/Exposition/Exposition';
 import React, { useEffect } from 'react'
 import Lenis from "@studio-freight/lenis";
@@ -13,6 +14,12 @@ import Login from './Page/Login/Login'
 import { NextUIProvider } from "@nextui-org/react";
 
 
+=======
+import Exposition from './Composant/jsx/Exposition_form'
+import { NextUIProvider } from '@nextui-org/react';
+import Oeuvre from './Composant/jsx/Oeuvre_form';
+import Login from '../src/Page/Login/Login'
+>>>>>>> 96875d133b898af3a4b24148f03235bd5cf5aa85
 function App() {
   const lenis = new Lenis();
   const raf = (time) => {
@@ -27,6 +34,7 @@ function App() {
   return (
     <NextUIProvider>
       <Routes>
+<<<<<<< HEAD
         <Route path='/' element={
           <>
             <div className='home-container'>
@@ -70,6 +78,13 @@ function App() {
           </>
         } />
       </Routes >
+=======
+        <Route path='/' element={<Home />} />
+        <Route path='/Login' element={<Login />} />
+        <Route path='/expo' element={<Exposition />} />
+        <Route path='/oeuvre' element={<Oeuvre />} />
+      </Routes>
+>>>>>>> 96875d133b898af3a4b24148f03235bd5cf5aa85
     </NextUIProvider>
   )
 }

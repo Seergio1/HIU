@@ -14,7 +14,10 @@
     "@mui/icons-material": "^5.14.12",
     "@mui/material": "^5.14.12",
     "@nextui-org/react": "^2.2.10",
+<<<<<<< HEAD
     "@studio-freight/react-lenis": "^0.0.46",
+=======
+>>>>>>> 96875d133b898af3a4b24148f03235bd5cf5aa85
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
